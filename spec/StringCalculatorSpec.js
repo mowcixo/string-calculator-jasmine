@@ -6,7 +6,7 @@ describe("StringCalculator -http://osherove.com/tdd-kata-1/-", function() {
 	})
 	
 	it("si recibe un número devolverá ese mismo número", function() {
-		expect(calc.Add('1')).toEqual(2);
-	});
+		expect(calc.Add('1')).toEqual(1)
+	})
 	
 })

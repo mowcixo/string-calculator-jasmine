@@ -4,11 +4,10 @@ var StringCalculator= {
 		numbers= ( numbers == '' ) ? '0' : numbers
 		
 		var res= 0,
-			splittedNumbers= numbers.split(',');
+			splittedNumbers= numbers.split(',')
 		
-		for( var i= 0; i < splittedNumbers.length; i++ ) {
+		for( var i= 0; i < splittedNumbers.length; i++ )
 			res += parseInt( splittedNumbers[ i ] )
-		}
 		
 		return res
 	}

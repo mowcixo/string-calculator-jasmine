@@ -9,4 +9,8 @@ describe("StringCalculator -http://osherove.com/tdd-kata-1/-", function() {
 		expect(calc.Add('1')).toEqual(1)
 	})
 	
+	it("si recibe dos números recibirá la suma de ambos", function() {
+		expect(calc.Add('1,2')).toEqual(4);
+	});
+	
 })

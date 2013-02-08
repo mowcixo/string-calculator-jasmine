@@ -1,10 +1,14 @@
 var StringCalculator= {
 
 	Add: function(numbers) {
-		var res
 		numbers= ( numbers == '' ) ? '0' : numbers
 		
-		res = parseInt(numbers)
+		var res= 0,
+			splittedNumbers= numbers.split(',');
+		
+		for( var i= 0; i < splittedNumbers.length; i++ ) {
+			res += parseInt( splittedNumbers[ i ] )
+		}
 		
 		return res
 	}

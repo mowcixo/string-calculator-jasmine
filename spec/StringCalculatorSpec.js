@@ -17,4 +17,8 @@ describe("StringCalculator -http://osherove.com/tdd-kata-1/-", function() {
 		expect( calc.Add('1,2,5,8,9') ).toEqual(25)
 	})
 	
+	it("si en lugar de comas usamos salto de línea como separador sigue sumando los números que reciba", function() {
+		expect( calc.Add('1\n2\n3') ).toEqual(6)
+	})
+	
 })

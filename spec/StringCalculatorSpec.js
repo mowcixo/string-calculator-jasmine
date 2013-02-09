@@ -29,4 +29,9 @@ describe("StringCalculator -http://osherove.com/tdd-kata-1/-", function() {
 		expect( calc.Add('//*\n1*2*3') ).toEqual(6)
 	})
 	
+	it("si uno de los números recibidos es negativo se mostrará una excepción con los mismos", function() {
+		expect( calc.Add('//*\n1*-1*3') ).toEqual(6)
+		expect( calc.Add('1,-1,-3') ).toEqual(6)
+	})
+	
 })

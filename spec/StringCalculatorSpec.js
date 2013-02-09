@@ -13,7 +13,7 @@ describe("StringCalculator -http://osherove.com/tdd-kata-1/-", function() {
 		expect( calc.Add('1,2') ).toEqual(3)
 	})
 	
-	it("reciba los numeros que reciba devolverá la suma de los mismos", function() {
+	it("si recibe varios números devolverá la suma de los mismos", function() {
 		expect( calc.Add('1,2,5,8,9') ).toEqual(25)
 	})
 	

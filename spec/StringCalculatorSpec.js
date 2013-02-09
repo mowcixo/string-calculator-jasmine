@@ -14,7 +14,7 @@ describe("StringCalculator -http://osherove.com/tdd-kata-1/-", function() {
 	})
 	
 	it("reciba los numeros que reciba devolverá la suma de los mismos", function() {
-		expect( calc.Add('1,2,5,8,9') ).toEqual(26)
+		expect( calc.Add('1,2,5,8,9') ).toEqual(25)
 	})
 	
 })

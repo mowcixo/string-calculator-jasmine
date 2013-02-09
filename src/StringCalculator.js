@@ -1,7 +1,7 @@
 var StringCalculator= {
 
 	Add: function(numbers) {
-		numbers= ( numbers == '' ) ? '0' : numbers
+		if( !numbers ) numbers = '0'
 		
 		var res= 0,
 			splittedNumbers= numbers.split(',')

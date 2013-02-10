@@ -51,7 +51,7 @@ describe("StringCalculator -http://osherove.com/tdd-kata-1/-", function() {
 	})
 	
 	it("si configuramos varios delimitadores", function() {
-		expect( calc.Add('//*%&\n1*2%3&1001') ).toEqual(6)
+		expect( calc.Add('//[*][%][&]\n1*2%3&1001') ).toEqual(6)
 	})
 
 })

@@ -17,6 +17,8 @@ var StringCalculator= {
 		
 		for( var i= 0; i < splittedNumbers.length; i++ ) {
 			var number = parseInt( splittedNumbers[ i ] )
+			if( number > 1000 ) continue
+			
 			if( number < 0 )
 				negativeNumbers.push( number )
 			else

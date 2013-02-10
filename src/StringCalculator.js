@@ -13,9 +13,19 @@ var StringCalculator= {
 			numbers = numbers.replace(/\n/g, ',')
 			
 		splittedNumbers = numbers.split( separator )
-			
-		for( var i= 0; i < splittedNumbers.length; i++ )
-			res += parseInt( splittedNumbers[ i ] )
+		
+		var negativeNumbers= []
+		
+		for( var i= 0; i < splittedNumbers.length; i++ ) {
+			var number= parseInt( splittedNumbers[ i ] )
+			if( number < 0 )
+				negativeNumbers.push( number )
+			else
+				res += number
+		}
+		
+		if( negativeNumbers.length > 0 )
+			throw new Error( 'Negative numbers not allowed: ' + negativeNumbers.join(',') + '.' )
 		
 		return res
 	}

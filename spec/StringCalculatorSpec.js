@@ -49,5 +49,9 @@ describe("StringCalculator -http://osherove.com/tdd-kata-1/-", function() {
 	it("si el delimitador que configuremos tiene más de un dígito de longitud", function() {
 		expect( calc.Add('//***\n1***2***3***1001') ).toEqual(6)
 	})
+	
+	it("si configuramos varios delimitadores", function() {
+		expect( calc.Add('//*%&\n1*2%3&1001') ).toEqual(6)
+	})
 
 })

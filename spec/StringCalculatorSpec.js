@@ -30,8 +30,15 @@ describe("StringCalculator -http://osherove.com/tdd-kata-1/-", function() {
 	})
 	
 	it("si uno de los números recibidos es negativo se mostrará una excepción con los mismos", function() {
-		expect( function() { calc.Add('//*\n1*-1*3') } ).toThrow( new Error('Negative numbers not allowed: -1.') )
-		expect( function() { calc.Add('1,-1,-3') } ).toThrow( new Error('Negative numbers not allowed: -1,-3.') )
+		expect( function() {
+			calc.Add('//*\n1*-1*3')
+		} )
+		.toThrow( new Error('Negative numbers not allowed: -1.') )
+
+		expect( function() {
+			calc.Add('1,-1,-3')
+		} )
+		.toThrow( new Error('Negative numbers not allowed: -1,-3.') )
 	})
 	
 })

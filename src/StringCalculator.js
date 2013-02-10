@@ -5,7 +5,8 @@ var StringCalculator= {
 		var res = 0,
 			customSeparator = numbers.indexOf('//') == 0,
 			separator = customSeparator ? numbers.substring(2, 3) : ',',
-			splittedNumbers = []
+			splittedNumbers = [],
+			negativeNumbers= []
 			
 		if( customSeparator )
 			numbers = numbers.split('\n')[1]
@@ -14,17 +15,15 @@ var StringCalculator= {
 			
 		splittedNumbers = numbers.split( separator )
 		
-		var negativeNumbers= []
-		
 		for( var i= 0; i < splittedNumbers.length; i++ ) {
-			var number= parseInt( splittedNumbers[ i ] )
+			var number = parseInt( splittedNumbers[ i ] )
 			if( number < 0 )
 				negativeNumbers.push( number )
 			else
 				res += number
 		}
 		
-		if( negativeNumbers.length > 0 )
+		if( !!negativeNumbers.length )
 			throw new Error( 'Negative numbers not allowed: ' + negativeNumbers.join(',') + '.' )
 		
 		return res

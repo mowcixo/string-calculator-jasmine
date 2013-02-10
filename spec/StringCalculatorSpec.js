@@ -41,4 +41,9 @@ describe("StringCalculator -http://osherove.com/tdd-kata-1/-", function() {
 		.toThrow( new Error('Negative numbers not allowed: -1,-3.') )
 	})
 	
+	it("si uno de los números recibidos es mayor que mil se ignorará", function() {
+		expect( calc.Add('//*\n1*2*3*1001') ).toEqual(6)
+		expect( calc.Add('1\n2,3,1001') ).toEqual(6)
+	})
+	
 })

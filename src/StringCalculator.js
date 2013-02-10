@@ -6,7 +6,7 @@ var StringCalculator= {
 			customSeparator = numbers.indexOf('//') == 0,
 			separator = customSeparator ? numbers.substring(2, 3) : ',',
 			splittedNumbers = [],
-			negativeNumbers= []
+			negativeNumbers = []
 			
 		if( customSeparator )
 			numbers = numbers.split('\n')[1]

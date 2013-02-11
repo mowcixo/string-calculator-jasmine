@@ -19,7 +19,7 @@ var StringCalculator= {
 				separator = ','
 				for( var i= 0 ; i < separators.length ; i++ ) {
 					var searchSeparator = separators[i]
-					while( numbers.indexOf( searchSeparator ) > 0 ) {
+					while( ~numbers.indexOf( searchSeparator ) ) {
 						numbers = numbers.replace( searchSeparator, separator )
 					}
 				}

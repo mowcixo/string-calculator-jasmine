@@ -14,9 +14,15 @@ var StringCalculator= {
 			if( multipleSeparator ) {
 				var separators = separator
 					.substring( 1, separator.length - 1 )
-					.split(']['),
-					r = new RegExp('[' + separators.join('') + ']', 'g')
-				numbers = numbers.replace( r, separator )
+					.split('][')
+
+				separator = ','
+				for( var i= 0 ; i < separators.length ; i++ ) {
+					var searchSeparator = separators[i]
+					while( numbers.indexOf( searchSeparator ) > 0 ) {
+						numbers = numbers.replace( searchSeparator, separator )
+					}
+				}
 			}
 		}else
 			numbers = numbers.replace( /\n/g, ',' )

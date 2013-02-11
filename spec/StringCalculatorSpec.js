@@ -55,7 +55,7 @@ describe("StringCalculator -http://osherove.com/tdd-kata-1/-", function() {
 	})
 	
 	it("si configuramos varios delimitadores que tienen a su vez más de un dígito de longitud", function() {
-		expect( calc.Add('//[*][%%][&&&]\n1*2%%3&&&1001') ).toEqual(6)
+		expect( calc.Add('//[*][%%][&&&]\n1*2%%3&&&1001&&&2') ).toEqual(8)
 	})
 
 })
